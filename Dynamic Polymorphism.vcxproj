@@ -147,7 +147,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Accounts_Utilities.cpp" />
+    <ClCompile Include="Checking.cpp" />
     <ClCompile Include="Dynamic Polymorphism.cpp" />
+    <ClCompile Include="I_Printable.cpp" />
+    <ClCompile Include="Savings.cpp" />
+    <ClCompile Include="Trust.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Account.h" />
+    <ClInclude Include="Accounts_Utilities.h" />
+    <ClInclude Include="Checking.h" />
+    <ClInclude Include="I_Printable.h" />
+    <ClInclude Include="Savings.h" />
+    <ClInclude Include="Trust.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
