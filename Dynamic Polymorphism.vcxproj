@@ -151,6 +151,7 @@
     <ClCompile Include="Accounts_Utilities.cpp" />
     <ClCompile Include="Checking.cpp" />
     <ClCompile Include="Dynamic Polymorphism.cpp" />
+    <ClCompile Include="Error_Checking_Functions.cpp" />
     <ClCompile Include="I_Printable.cpp" />
     <ClCompile Include="Savings.cpp" />
     <ClCompile Include="Trust.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="Account.h" />
     <ClInclude Include="Accounts_Utilities.h" />
     <ClInclude Include="Checking.h" />
+    <ClInclude Include="Error_Checking_Functions.h" />
     <ClInclude Include="I_Printable.h" />
     <ClInclude Include="Savings.h" />
     <ClInclude Include="Trust.h" />

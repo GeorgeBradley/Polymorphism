@@ -3,24 +3,18 @@
 #include "I_Printable.h"
 class Account : public I_Printable
 {
-public:
+private:
     std::string sAccountName;
+    double dAmount;
+public:
     
-    Account(std::string sAccountName) :sAccountName(sAccountName) {}
-    Account() :sAccountName("Base Account") {}
-
-    virtual void Withdraw(double dMoney) 
-    {
-        std::cout << "Account: Withdraw" << std::endl; 
-    }
-    virtual void display(std::ostream& os) const override
-    {
-        os << sAccountName << std::endl;
-    }
-    
-    virtual ~Account() 
-    {
-
-    }
+    Account(std::string sAccountName, double dAmount);
+    Account();
+    virtual std::string Get_Account_Name() const;
+    virtual double Get_Amount() const;
+    virtual bool Withdraw(double dAmount)  = 0;
+    virtual bool Deposit(double dDeposit) = 0;
+    virtual void display(std::ostream& os) const override = 0;
+    virtual ~Account();
 };
 

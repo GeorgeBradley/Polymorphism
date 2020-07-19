@@ -12,15 +12,15 @@
 
 int main()
 {
-    Account *ptrAccount = new Account; 
+    
     Account* ptrSavings = new Savings;
     Account* ptrChecking = new Checking;
     Account* ptrTrust = new Trust;
-    std::vector<Account*>vecAccounts;
-    vecAccounts.push_back(ptrAccount);
-    vecAccounts.push_back(ptrSavings);
+    std::vector<Account*>vecAccounts = { ptrSavings, ptrChecking, ptrTrust };
+  
+    /*vecAccounts.push_back(ptrSavings);
     vecAccounts.push_back(ptrChecking);
-    vecAccounts.push_back(ptrTrust);
+    vecAccounts.push_back(ptrTrust);*/
   
   //This is an example of statically bound at runtime.
   /*  ptrAccount->Withdraw(1000);
@@ -29,8 +29,8 @@ int main()
     ptrTrust->Withdraw(1000);*/
     //This is an example of dynamic binding
 
+    Deposit(vecAccounts);
     Display_Accounts(vecAccounts);
-    delete ptrAccount;
     delete ptrSavings;
     delete ptrChecking;
     delete ptrTrust;

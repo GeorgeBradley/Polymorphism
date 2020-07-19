@@ -3,20 +3,10 @@
 class Savings : public Account
 {
 public:
-    Savings() :Account("Savings Account") 
-    {
-    }
+    Savings();
 
-    virtual void Withdraw(double dMoney) 
-    { 
-        std::cout << "Savings: Withdraw" << std::endl; 
-    }
-
-    virtual void display(std::ostream& os) const override 
-    {
-        os << sAccountName << std::endl;
-    }
-    virtual ~Savings() {
-
-    }
+    virtual bool Deposit(double dAmount)override;
+    virtual bool Withdraw(double dAmount) override;
+    virtual void display(std::ostream& os) const override;
+    virtual ~Savings();
 };

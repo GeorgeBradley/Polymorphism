@@ -3,14 +3,12 @@
 class Trust : public Account
 {
 public:
-    Trust() :Account("Trust Account") {}
-    virtual void Withdraw(double dMoney) { std::cout << "Trust: Withdraw" << std::endl; }
-    virtual void display(std::ostream& os) const override {
-        os << sAccountName << std::endl;
-    }
-    virtual ~Trust() {
-
-    }
+    Trust();
+    
+    virtual bool Deposit(double dAmount)override;
+    virtual bool Withdraw(double dAmount);
+    virtual void display(std::ostream& os) const override;
+    virtual ~Trust();
 };
 
 
